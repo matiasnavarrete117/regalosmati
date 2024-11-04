@@ -26,7 +26,7 @@ h1 {
     justify-content: center;
     background-color: rgba(0, 128, 0, 0.8); /* Verde oscuro con transparencia */
     color: white; /* Color del texto */
-    padding: 20px; /* Espacio interno */
+    
     position: relative; /* Para posicionarlo respecto a su contenedor */
     z-index: 1; /* Asegura que esté por encima de otros elementos */
     align-items: center;
