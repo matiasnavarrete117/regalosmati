@@ -13,6 +13,12 @@ body {
     box-sizing: border-box; /* Incluir padding en el tamaño total */
 }
 
+button img {
+    width: 24px; /* Ajusta el ancho de la imagen */
+    height: 24px; /* Ajusta el alto de la imagen */
+    filter: invert(100%); /* Cambia negro a blanco */
+}
+
 
 /* O aplicar la fuente Roboto en elementos específicos */
 h1 {
@@ -38,7 +44,7 @@ h1 {
     justify-content: center; /* Alinear los elementos en el eje vertical hacia la parte superior */
     margin: 0 auto; /* Centrando el contenedor horizontalmente */
     width: 100%; /* Ocupa todo el ancho disponible */
-   
+   margin-top: 10px;
     background-color: rgba(24, 24, 50, 0.8); /* midnightblue con 80% de opacidad */
     padding: 20px; /* Espacio interno */
     align-items: flex-start; /* Alinear los elementos al inicio en el eje horizontal */
@@ -82,10 +88,22 @@ h1 {
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
 
+.product-image-container img {
+    max-height: 280px;
+    width: 280px; /* Ancho fijo */
+    height: 280px; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin deformarse */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
 .product-options {
     /* Estilos del contenedor (opcional) */
     padding: 10px; /* Espacio interno del contenedor */
     text-align: left; /* Centra el contenido dentro del contenedor */
+}
+
+.product-options p {
+    margin-top: 5px;
+    width: 300px; /* Ancho fijo */
 }
 
 .buy-button {
@@ -99,6 +117,7 @@ h1 {
     transition: background-color 0.3s; /* Transición suave para el cambio de color */
     margin-top: 5px;
     width: 100%; /* Ocupa todo el ancho del contenedor */
+    
 }
 
 /* Cambiar a dorado al pasar el mouse */
@@ -107,15 +126,66 @@ h1 {
     color: black; /* Cambiar el color del texto si prefieres */
 }
 
+
 /* Cambiar a dorado más oscuro al hacer clic */
 .buy-button:active {
     background-color: #B8860B; /* Dorado más oscuro */
+}
+
+/* Contenedor del botón */
+
+.botones_con_info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+    
+}
+
+.tooltip {
+  display: flex;
+    max-width: 220px; /* Ajusta según el ancho deseado */
+    display: inline-block; /* Permite que el ancho se ajuste */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el desbordamiento */
+    text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 1%;
+}
+
+/* Estilo del botón */
+.info-button {
+    border: none;
+    background: none;
+    position: relative;
+    padding: 0;
+}
+
+/* Tooltip: mensaje que aparece al hacer clic */
+.tooltip {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    bottom: 100%; /* Posiciona el mensaje arriba del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Clase activa para mostrar el tooltip */
+.tooltip-active {
+    display: block;
 }
 
 #animacionNavidad {
     width: 100px; /* Ajusta según tus necesidades */
     height: 100px;
 }
+
+
 
 
 @media (max-width: 600px) {

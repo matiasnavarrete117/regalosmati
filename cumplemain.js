@@ -62,3 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajustar la velocidad de la animación
     animation.setSpeed(0.5); // Cambia el número para ajustar la velocidad (0.5 es la mitad de la velocidad normal)
 });
+
+function toggleTooltip() {
+    const tooltip = document.getElementById("tooltip");
+    tooltip.classList.toggle("tooltip-active");
+}
+function showTooltip() {
+    const tooltip = document.getElementById("tooltip");
+    }
