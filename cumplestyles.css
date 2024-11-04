@@ -1,0 +1,142 @@
+/* Aplicar la fuente Poppins en todo el documento */
+body {
+    margin: 0; /* Elimina márgenes por defecto del body */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-image: url('pintar-bola-navidad.jpg'); /* Asegúrate de usar la ruta correcta a tu imagen */
+    background-size: cover; /* La imagen cubrirá toda la pantalla */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: 'Roboto', sans-serif; /* Mantén la fuente que estés usando */
+    font-size: larger;
+    color: aliceblue;
+    background-attachment: fixed;
+}
+
+
+/* O aplicar la fuente Roboto en elementos específicos */
+h1 {
+    position: absolute; /* Permite que el h1 se posicione en relación al body */
+    top: 0; /* Coloca el h1 en la parte superior */
+    left: 0; /* Coloca el h1 en la parte izquierda */
+    right: 0; /* Coloca el h1 en la parte derecha */
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; /* Cursiva para darle un toque sofisticado */
+    font-size: 2.5rem; /* Tamaño de fuente destacable */
+    justify-content: center;
+    background-color: rgba(0, 128, 0, 0.8); /* Verde oscuro con transparencia */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio interno */
+    position: relative; /* Para posicionarlo respecto a su contenedor */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    align-items: center;
+    margin: 0;
+}
+
+.Dias_Restantes_Todo {
+    display: flex; /* Activar Flexbox */
+    flex-direction: column; /* Alinear los elementos en una columna */
+    justify-content: center; /* Alinear los elementos en el eje vertical hacia la parte superior */
+    margin: 0 auto; /* Centrando el contenedor horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+   
+    background-color: rgba(24, 24, 50, 0.8); /* midnightblue con 80% de opacidad */
+    padding: 20px; /* Espacio interno */
+    align-items: flex-start; /* Alinear los elementos al inicio en el eje horizontal */
+    border-radius: 7px; /* Bordes redondeados con un radio de 7px */
+    
+    max-width: 500px; /* Establecer un maximo de 500px de ancho */
+}
+
+
+
+.Dias_Navidad_Container {
+    display: flex;
+    justify-content: flex-start; /* Para alinear los elementos a la derecha */
+    align-items: center;
+
+}
+
+.product-gallery {
+    display: flex; /* Activar Flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples líneas */
+    justify-content: flex-start; /* Alinear elementos al inicio en el eje horizontal */
+    gap: 20px; /* Espacio entre los recuadros */
+    padding: 20px; /* Espacio interno del contenedor */
+}
+
+
+
+.product-image-container {
+    
+    display: flex; /* Activar Flexbox dentro de cada contenedor */
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno alrededor de la imagen */
+    max-width: 300px; max-height: 300px;
+    min-width: 300px; min-height: 300px;
+    width: 100%; /* Asegura que use todo el ancho disponible */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 20px;
+    flex: 0 1 calc(25% - 20px); /* Ajusta el tamaño de los contenedores, usando el 25% del espacio disponible menos el gap */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+.product-options {
+    /* Estilos del contenedor (opcional) */
+    padding: 10px; /* Espacio interno del contenedor */
+    text-align: left; /* Centra el contenido dentro del contenedor */
+}
+
+.buy-button {
+    background-color: #4700b9; /* Color de fondo (verde) */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espacio interno del botón (alto y ancho) */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+    margin-top: 5px;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+/* Cambiar a dorado al pasar el mouse */
+.buy-button:hover {
+    background-color: #FFD700; /* Color dorado */
+    color: black; /* Cambiar el color del texto si prefieres */
+}
+
+/* Cambiar a dorado más oscuro al hacer clic */
+.buy-button:active {
+    background-color: #B8860B; /* Dorado más oscuro */
+}
+
+#animacionNavidad {
+    width: 100px; /* Ajusta según tus necesidades */
+    height: 100px;
+}
+
+
+@media (max-width: 600px) {
+    .product-gallery {
+        justify-content: center; /* Centrar elementos en el eje horizontal */
+    }
+    
+    .product-image-container {
+        width: 100%; /* Asegura que use todo el ancho disponible */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
+        
+        padding: 10px; /* Reducir el espacio interno en móviles */
+    }
+    .product-options {
+        flex-direction: column;
+
+    }
+}
+
