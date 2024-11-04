@@ -43,7 +43,6 @@ h1 {
     padding: 20px; /* Espacio interno */
     align-items: flex-start; /* Alinear los elementos al inicio en el eje horizontal */
     border-radius: 7px; /* Bordes redondeados con un radio de 7px */
-    
     max-width: 300px; /* Establecer un maximo de 500px de ancho */
 }
 
