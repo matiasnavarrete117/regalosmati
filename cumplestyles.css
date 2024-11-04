@@ -10,27 +10,26 @@ body {
     font-size: larger;
     color: aliceblue;
     background-attachment: fixed;
+    box-sizing: border-box; /* Incluir padding en el tamaño total */
 }
 
 
 /* O aplicar la fuente Roboto en elementos específicos */
 h1 {
-    position: absolute; /* Permite que el h1 se posicione en relación al body */
-    top: 0; /* Coloca el h1 en la parte superior */
-    left: 0; /* Coloca el h1 en la parte izquierda */
-    right: 0; /* Coloca el h1 en la parte derecha */
+    position: relative; /* Cambiar a relative o eliminar */
     display: flex;
     font-family: 'Roboto', sans-serif;
-    font-style: italic; /* Cursiva para darle un toque sofisticado */
-    font-size: 2.5rem; /* Tamaño de fuente destacable */
+    font-style: italic;
+    font-size: 2.5rem;
     justify-content: center;
-    background-color: rgba(0, 128, 0, 0.8); /* Verde oscuro con transparencia */
-    color: white; /* Color del texto */
-    
-    position: relative; /* Para posicionarlo respecto a su contenedor */
-    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    background-color: rgba(0, 128, 0, 0.8);
+    color: white;
+    z-index: 1;
     align-items: center;
-    margin: 0;
+    margin: 0; 
+    padding: 1rem; /* Agregar padding para evitar desbordamiento */
+    width: 100%; /* Asegurarse de que ocupa todo el ancho del contenedor */
+    box-sizing: border-box; /* Incluir padding en el tamaño total */
 }
 
 .Dias_Restantes_Todo {
@@ -45,7 +44,7 @@ h1 {
     align-items: flex-start; /* Alinear los elementos al inicio en el eje horizontal */
     border-radius: 7px; /* Bordes redondeados con un radio de 7px */
     
-    max-width: 500px; /* Establecer un maximo de 500px de ancho */
+    max-width: 300px; /* Establecer un maximo de 500px de ancho */
 }
 
 
@@ -129,12 +128,13 @@ h1 {
         width: 100%; /* Asegura que use todo el ancho disponible */
     }
 
-    h1 {
-        font-size: 1.5rem; /* Tamaño de fuente más pequeño para móviles */
-        
-        padding: 10px; /* Reducir el espacio interno en móviles */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2rem; /* Ajustar el tamaño de fuente en pantallas pequeñas */
+            padding: 0.5rem; /* Ajustar padding si es necesario */
+        }
     }
-    .product-options {
+    options {
         flex-direction: column;
 
     }
