@@ -1,7 +1,7 @@
 /* Aplicar la fuente Poppins en todo el documento */
 body {
     margin: 0; /* Elimina márgenes por defecto del body */
-    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
     background-image: url('pintar-bola-navidad.jpg'); /* Asegúrate de usar la ruta correcta a tu imagen */
     background-size: cover; /* La imagen cubrirá toda la pantalla */
     background-position: center; /* Centra la imagen en el contenedor */
@@ -11,12 +11,19 @@ body {
     color: aliceblue;
     background-attachment: fixed;
     box-sizing: border-box; /* Incluir padding en el tamaño total */
+    position: relative;
+    
 }
 
 button img {
     width: 24px; /* Ajusta el ancho de la imagen */
     height: 24px; /* Ajusta el alto de la imagen */
     filter: invert(100%); /* Cambia negro a blanco */
+}
+
+.dorado {
+    color: rgb(223, 164, 0); /* Color dorado */
+    font-weight: bold; /* Opcional: para hacer el texto más destacado */
 }
 
 
@@ -52,7 +59,26 @@ h1 {
     max-width: 300px; /* Establecer un maximo de 500px de ancho */
 }
 
+.Tallas_Matias {
+    display: flex; /* Activar Flexbox */
+    flex-direction: column; /* Alinear los elementos en una columna */
+    justify-content: center; /* Alinear los elementos en el eje vertical hacia la parte superior */
+    margin: 0 auto; /* Centrando el contenedor horizontalmente */
+    width: 100%; /* Ocupa todo el ancho disponible */
+   margin-top: 10px;
+    background-color: rgba(24, 24, 50, 0.8); /* midnightblue con 80% de opacidad */
+    padding: 20px; /* Espacio interno */
+    align-items: flex-start; /* Alinear los elementos al inicio en el eje horizontal */
+    border-radius: 7px; /* Bordes redondeados con un radio de 7px */
+    max-width: 350px; /* Establecer un maximo de 500px de ancho */
+    color: #FFD700;
 
+}
+
+.Tallas_Matias p {
+    margin: 0; /* Eliminar margen externo */
+    padding: 5px 0; /* Agregar espacio interno */
+}
 
 .Dias_Navidad_Container {
     display: flex;
@@ -67,26 +93,35 @@ h1 {
     justify-content: flex-start; /* Alinear elementos al inicio en el eje horizontal */
     gap: 20px; /* Espacio entre los recuadros */
     padding: 20px; /* Espacio interno del contenedor */
+    
 }
 
 
 
+
 .product-image-container {
-    
     display: flex; /* Activar Flexbox dentro de cada contenedor */
     justify-content: center; /* Centra horizontalmente la imagen */
     align-items: center; /* Centra verticalmente la imagen */
     background-color: white; /* Fondo blanco */
     border-radius: 10px; /* Bordes redondeados */
     padding: 20px; /* Espacio interno alrededor de la imagen */
-    max-width: 300px; max-height: 300px;
-    min-width: 300px; min-height: 300px;
+    max-width: 300px; 
+    max-height: 300px;
+    min-width: 300px; 
+    min-height: 300px;
     width: 100%; /* Asegura que use todo el ancho disponible */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     margin-top: 20px;
     flex: 0 1 calc(25% - 20px); /* Ajusta el tamaño de los contenedores, usando el 25% del espacio disponible menos el gap */
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
 }
+
+.gold-background {
+    background-color: rgb(223, 164, 0); /* Color dorado */
+}
+
+
 
 .product-image-container img {
     max-height: 280px;
@@ -185,8 +220,26 @@ h1 {
     height: 100px;
 }
 
+.content {
+    padding: 20px; /* Espacio alrededor del contenido */
+    margin-bottom: 60px; /* Ajusta este valor según la altura del footer */
+}
 
 
+
+.footer {
+    background-color: rgb(223, 164, 0); /* Color dorado */
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; /* Color de letra blanco */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espacio interno */
+    position: fixed; /* Mantiene el footer fijo */
+    bottom: 0; /* Alinea el footer a la parte inferior */
+    left: 0; /* Alinea el footer al borde izquierdo */
+    right: 0; /* Alinea el footer al borde derecho */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil en la parte superior del footer */
+    font-size: small; /* Tamaño de fuente */
+}
 
 @media (max-width: 600px) {
     .product-gallery {
@@ -207,5 +260,5 @@ h1 {
         flex-direction: column;
 
     }
+ 
 }
-
